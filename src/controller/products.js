@@ -2,12 +2,10 @@ const ProductsModel = require('../models/products')
 
 const getFilterDataProducts = async (req, res) => {
     const {body} = req;
-    console.log("body : ");
-    console.log(body.filter);
     const fromDate = body.filter.from;
     const toDate = body.filter.to;
     const minRating = body.filter.min_rating; // "minRating": 4
-    console.log("minRating : ", minRating);
+    
     try {
         if (fromDate !== null && fromDate !== undefined && toDate !== null && toDate !== undefined) {
             const [data] = await ProductsModel.getFilterDataProduct(fromDate, toDate);
@@ -22,9 +20,9 @@ const getFilterDataProducts = async (req, res) => {
                 data: data
             })
         } 
-        // console.log(data);
+        
     } catch (error) {
-        // console.log(error);
+        
         res.status(500).send(
             {
                 message: 'Something went wrong.',
@@ -36,8 +34,7 @@ const getFilterDataProducts = async (req, res) => {
 
 const getFilterDataProductsForCheckStocks = async (req, res) => {
     const {body} = req;
-    console.log("body : ");
-    console.log(body.filter);
+
     const minStock = body.filter.min_stock; // "minRating": 4
     
     try {
@@ -46,9 +43,9 @@ const getFilterDataProductsForCheckStocks = async (req, res) => {
             message: 'GET all data products for checking stocks.',
             data: data
         })
-        // console.log(data);
+        
     } catch (error) {
-        // console.log(error);
+
         res.status(500).send(
             {
                 message: 'Something went wrong.',
@@ -60,8 +57,7 @@ const getFilterDataProductsForCheckStocks = async (req, res) => {
 
 const getProductsSortedBySales = async (req, res) => {
     const {body} = req;
-    console.log("body : ");
-    console.log(body.filter);
+    
     const sortOrder = body.filter.sort_order; // "minRating": 4
     
     try {
@@ -70,9 +66,9 @@ const getProductsSortedBySales = async (req, res) => {
             message: 'GET all data products sort by sales.',
             data: data
         })
-        // console.log(data);
+        
     } catch (error) {
-        // console.log(error);
+        
         res.status(500).send(
             {
                 message: 'Something went wrong.',

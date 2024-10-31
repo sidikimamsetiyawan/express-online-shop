@@ -16,15 +16,14 @@ const displayGroupAnagrams = (req, res) => {
             .map(group => group.sort())
             .sort((a, b) => b.length - a.length || (a[0] > b[0] ? 1 : -1));
 
-        console.log(sortedGroups);
         return res.json({
-            message: 'GET all data products sort by sales.',
+            message: 'Successfully retrieved and sorted anagram groups.',
             data: sortedGroups
         })
     } catch (error) {
         res.status(500).send(
             {
-                message: 'Something went wrong.',
+                message: 'An error occurred while processing anagram groups.',
                 error: error
             });
     }

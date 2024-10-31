@@ -4,13 +4,13 @@ const getAllCategories = async (req, res) => {
     // Pemangillan model bersifat asynchronous
     try {
         const [data] = await CategoriesModel.getAllCategory();
-        // console.log(data);
+        
         return res.json({
             message: 'GET all data categories.',
             data: data
         })
     } catch (error) {
-        // console.log(error);
+        
         res.status(500).send(
             {
                 message: 'Something went wrong.',
@@ -21,8 +21,8 @@ const getAllCategories = async (req, res) => {
 }
 
 const createNewCategories = async (req, res) => {
-    console.log(req.body);
     const {body} = req;
+
     try {
         await CategoriesModel.createNewCategory(body);
 
@@ -31,7 +31,7 @@ const createNewCategories = async (req, res) => {
             data: body
         })
     } catch (error) {
-        console.log(error);
+        
         res.status(500).send(
             {
                 message: 'Something went wrong.',
@@ -44,7 +44,6 @@ const createNewCategories = async (req, res) => {
 const updateCategories = async (req, res) => {
     const {body} = req;
     const {idCategory} = req.params;
-    console.log('IDCategories : ', idCategory);
     
     try {
         await CategoriesModel.updateCategory(body, idCategory);
@@ -57,7 +56,6 @@ const updateCategories = async (req, res) => {
             }
         })
     } catch (error) {
-        console.log(error);
         res.status(500).send(
             {
                 message: 'Something went wrong.',
@@ -69,7 +67,6 @@ const updateCategories = async (req, res) => {
 
 const deleteCategories = async (req, res) => {
     const {idCategory} = req.params;
-    console.log('IDCategories : ', idCategory);
     
     try {
         await CategoriesModel.deleteCategory(idCategory);
@@ -79,7 +76,7 @@ const deleteCategories = async (req, res) => {
             data: null
         })
     } catch (error) {
-        console.log(error);
+        
         res.status(500).send(
             {
                 message: 'Something went wrong.',

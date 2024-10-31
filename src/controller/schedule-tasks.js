@@ -1,21 +1,6 @@
 
 const displayScheduleTasks = (req, res) => {
-    // Cek apakah req.body dan req.body.tasks sudah ada
-    // if (req.body && req.body.tasks) {
-    //     const tasks = req.body.tasks;
-
-    //     // Lakukan pengolahan data pada tasks
-    //     console.log('Tasks:', tasks);
-        
-    //     res.status(200).send("Data tasks berhasil diakses.");
-    // } else {
-    //     res.status(400).send("Data tasks tidak ditemukan dalam request.");
-    // }
-    // console.log("Dump - Request",req.body);
-    // const { body } = req.body;
-    // console.log("Dump - Variable Body",body.tasks);
     const taskList = req.body.tasks;
-    console.log("Dump - Task List ",taskList);
     const tasks = new Map();
     const indegrees = new Map();
 
@@ -58,16 +43,15 @@ const displayScheduleTasks = (req, res) => {
         return { error: 'Cycle detected! Scheduling not possible' };
         }
 
-        console.log(result);
         return res.json({
-            message: 'GET all data products sort by sales.',
+            message: 'Tasks successfully scheduled in order of dependencies.',
             data: result
         })
 
     } catch (error) {
         res.status(500).send(
             {
-                message: 'Something went wrong.',
+                message: 'An error occurred while processing task scheduling.',
                 error: error
             });
     }
