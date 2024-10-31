@@ -45,6 +45,17 @@ This project implements solutions for tasks from the Game Consign Backend Develo
     npm start
     ```
 
+## Database Setup (MySQL)
+
+This project requires a MySQL database. You can download the initial database file from this link: [MySQL Database File](https://drive.google.com/file/d/1F5AvJBU_wA1YPcZsLUq_Nm8QVpQJJMnM/view?usp=sharing).
+
+### Steps to Set Up
+
+1. **Create Database**: 
+   - Create a MySQL database named `express_online_shop`:
+   ```sql
+   CREATE DATABASE express_online_shop;
+
 ## Testing with Postman
 
 You can access the Postman collection for testing the API endpoints here: [Postman Collection](https://orange-trinity-586014.postman.co/workspace/ba2fd21e-faab-475c-ba96-402a4b6ca449/folder/9072736-c9c8d5df-ae0b-4d8f-8112-f1742058a7f9).
