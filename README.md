@@ -45,9 +45,7 @@ This project implements solutions for tasks from the Game Consign Backend Develo
     npm start
     ```
 
-## Testing
+## Testing with Postman
 
-To test each function, run:
-```bash
-npm test
+You can access the Postman collection for testing the API endpoints by following this link: [Postman Collection](https://orange-trinity-586014.postman.co/workspace/ba2fd21e-faab-475c-ba96-402a4b6ca449/folder/9072736-c9c8d5df-ae0b-4d8f-8112-f1742058a7f9).
 
