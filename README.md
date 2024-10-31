@@ -33,7 +33,7 @@ This project implements solutions for tasks from the Game Consign Backend Develo
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/your-repo.git
+    git clone https://github.com/sidikimamsetiyawan/express-online-shop.git
     ```
 2. Install dependencies:
     ```bash
@@ -47,5 +47,25 @@ This project implements solutions for tasks from the Game Consign Backend Develo
 
 ## Testing with Postman
 
-You can access the Postman collection for testing the API endpoints by following this link: [Postman Collection](https://orange-trinity-586014.postman.co/workspace/ba2fd21e-faab-475c-ba96-402a4b6ca449/folder/9072736-c9c8d5df-ae0b-4d8f-8112-f1742058a7f9).
+You can access the Postman collection for testing the API endpoints here: [Postman Collection](https://orange-trinity-586014.postman.co/workspace/ba2fd21e-faab-475c-ba96-402a4b6ca449/folder/9072736-c9c8d5df-ae0b-4d8f-8112-f1742058a7f9).
 
+Alternatively, you can download the collection file and import it into Postman using the "Import" feature. [Download the Postman collection](https://drive.google.com/file/d/1xtSbEKyLTYlTULRE1VxPeiIc-PaMiaO9/view?usp=sharing).
+
+## Documentation
+### 1. Task Scheduler with Dependencies
+![image](https://github.com/user-attachments/assets/04a9839f-fd42-4448-b298-f2472acdf5a9)
+
+
+### 2. Product Data Query
+- **Criteria**:
+  - Products created in the last 6 months.
+    ![image](https://github.com/user-attachments/assets/1a3d21a2-1cf8-4698-a412-2f9690aa76c8)
+  - Average review rating of 4 or higher.
+    ![image](https://github.com/user-attachments/assets/bf1e2419-44ba-40a1-8710-6c23190d6847)
+  - Belong to categories with over 10 products.
+    ![image](https://github.com/user-attachments/assets/f5b86e48-9f9c-404b-8568-4f89536f2afe)
+  - Sorted by total quantity sold in descending order.
+    ![image](https://github.com/user-attachments/assets/641bb4e0-c810-4d3a-9de0-b4e24ba38e63)
+
+### 3. Anagram Grouping
+![image](https://github.com/user-attachments/assets/f401aefa-f6e7-497c-a9c4-5f265530b90c)
